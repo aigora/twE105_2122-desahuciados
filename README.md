@@ -9,6 +9,7 @@ Diego Sánchez Rey @diego22222
 [Nombres, apellidos, y usuario GitHub de los integrantes del equipo.]
 
 ## Objetivos del trabajo
+
 -Crear un menú principal que te permita escoger donde empezar el laberinto y seguidamente un menú secundario donde selecciones el nivel de dificultad.
 -Introducir funciones,ficheros y estructuras para realizar el laberinto.
 -
