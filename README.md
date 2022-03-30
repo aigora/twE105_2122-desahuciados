@@ -4,6 +4,7 @@ Realizar un laberinto que te situe en un sitio aleatorio o unas coordenadas, con
 
 ## Integrantes del equipo
 Diego Sánchez Rey @diego22222
+José Miguel Santiler Gómez  @Josesantiler
 
 
 [Nombres, apellidos, y usuario GitHub de los integrantes del equipo.]
