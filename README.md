@@ -3,7 +3,8 @@
 Realizar un laberinto que te situe en un sitio aleatorio o unas coordenadas, con distintas ayudas para encontrar la salida durante el recorrido por el laberinto.Añadir la posibilidad establecer un nivel de dificultad a cada laberinto
 
 ## Integrantes del equipo
-Diego Sánchez Rey @diego22222\n
+Diego Sánchez Rey @diego22222
+
 José Miguel Santiler Gómez  @Josesantiler
 
 
