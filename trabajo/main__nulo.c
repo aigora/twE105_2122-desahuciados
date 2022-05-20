@@ -5,20 +5,20 @@ typedef struct{
     int tiempo;
 }Datosjugadores;
 int main (){
-     Preguntamos al jugador su nombre y lo guardamos en un fichero.
+     //Preguntamos al jugador su nombre y lo guardamos en un fichero.
      printf("Introduzca el nombre del jugador.\n");
      char Nombre[50];
-FILE *f;
-f= fopen("datosjugadores.txt","w");
-if(f==NULL){
-    printf("Error al abrir el fichero.\n", "w");
-    return -1;
-}
-else {// Si ha funcionado, comienza escritura
-fprintf(f,"%s", Nombre [50]);
-fclose(f);
-return 0;
-}
+//FILE *f;
+//f= fopen("datosjugadores.txt","w");
+//if(f==NULL){
+    //printf("Error al abrir el fichero.\n", "w");
+    //return -1;
+//}
+//else {// Si ha funcionado, comienza escritura
+//fprintf(f,"%s", Nombre [50]);
+//fclose(f);
+//return 0;
+//}
 
 
  Menu para seleccionar el nivel de dificultad
