@@ -29,7 +29,7 @@ do{
             printf("2. Medio\n");
             printf("3. Dificil\n");
             printf("4. Salir\n");
->>>>>>> Stashed changes
+
 
 scanf("%i",&op);
     switch(op)
@@ -55,11 +55,9 @@ break;
 }
 
 }
-<<<<<<< Updated upstream
+
 while((op!=4)&&(op!=3)&&(op!=2)&&(op!=1));
-=======
-    while ((op!=1)&&(op!=2)&&(op!=3)&&(op!=4));
->>>>>>> Stashed changes
+
 
 return 0;
 }
