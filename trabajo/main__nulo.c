@@ -65,13 +65,13 @@ break;
 while((op!=4)&&(op!=3)&&(op!=2)&&(op!=1));
 
 //Coordenadas del jugador x e y para moverse por el tablero
-int coord_x;
-int coord_y;
-_Bool final=0;
+int coord_x=1;
+int coord_y=1;
+int fin0;
 
 int Tablero_facil[10][10]=
     {{0,0,0,0,0,0,0,0,0,'\0'},
-    {1,1,1,1,0,0,1,1,1,'\0'},
+    {0,1,1,1,0,0,1,1,1,'\0'},// empezaría en el primer uno, es decir en la posición (1,1)
     {0,0,0,1,1,1,1,0,0,'\0'},
     {0,1,1,1,1,1,0,1,0,'\0'},
     {0,1,0,0,0,0,0,1,0,'\0'},

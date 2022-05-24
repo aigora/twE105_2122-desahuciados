@@ -1,12 +1,15 @@
 # depslib dependency file v1.0
 1653382866 source:c:\users\diego\onedrive\escritorio\diego sánchez rey\nueva carpeta (2)\twe105_2122-desahuciados\trabajo\main.c
 
-1653384375 source:c:\users\diego\onedrive\escritorio\diego sánchez rey\nueva carpeta (2)\twe105_2122-desahuciados\trabajo\main__nulo.c
+1653413269 source:c:\users\diego\onedrive\escritorio\diego sánchez rey\nueva carpeta (2)\twe105_2122-desahuciados\trabajo\main__nulo.c
 	<stdio.h>
+	<math.h>
+	<string.h>
+	"funciones.h"
 
 1653403909 source:c:\users\diego\onedrive\escritorio\diego sánchez rey\nueva carpeta (2)\twe105_2122-desahuciados\trabajo\funciones.c
 	"funciones.h"
 
-1653403909 c:\users\diego\onedrive\escritorio\diego sánchez rey\nueva carpeta (2)\twe105_2122-desahuciados\trabajo\funciones.h
+1653413230 c:\users\diego\onedrive\escritorio\diego sánchez rey\nueva carpeta (2)\twe105_2122-desahuciados\trabajo\funciones.h
 	<stdio.h>
 
