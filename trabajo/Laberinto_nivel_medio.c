@@ -4,7 +4,6 @@
 //
 //  Created by Jose Miguel Santiler Gomez on 23/5/22.
 // Laberinto nivel Medio
-#include <stdio.h>
 int main(){
     int matriz[16][16] = {
         {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
@@ -23,13 +22,11 @@ int main(){
         {0,1,0,0,0,0,0,0,0,0,0,0,1,0,1,0},
         {0,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1},
         {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-        };
+    
     int filas, columnas;
     // Se recorre como un bucle anidado
     for(filas = 0;filas < 16; filas++){
         for(columnas = 0; columnas < 16; columnas++)
-            printf("%d\t", matriz[filas][columnas]);
+          printf("%d\t", matriz[filas][columnas]);
         printf("\n\n");
     }
-    return 0;
-}
