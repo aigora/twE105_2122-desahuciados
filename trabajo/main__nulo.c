@@ -1,7 +1,7 @@
 #include <stdio.h>
 void tablero(int matriz[][24],int fila,int columna);
 typedef struct{
-    char Nombre[20] ;
+    char Nombre[50] ;
     int dificultad;
     int tiempo;
 }Datosjugadores;
@@ -29,7 +29,7 @@ do{
             printf("2. Medio\n");
             printf("3. Dificil\n");
             printf("4. Salir\n");
->>>>>>> Stashed changes
+//Stashed changes
 
 scanf("%i",&op);
     switch(op)
@@ -55,11 +55,11 @@ break;
 }
 
 }
-<<<<<<< Updated upstream
+//Updated upstream
 while((op!=4)&&(op!=3)&&(op!=2)&&(op!=1));
-=======
+//
     while ((op!=1)&&(op!=2)&&(op!=3)&&(op!=4));
->>>>>>> Stashed changes
+//Stashed changes
 
 return 0;
 }
@@ -90,6 +90,31 @@ printf("%d\t " ,Tablero[i][j]);
 }
 printf("| \n");
 }
+    int matriz[16][16] = {
+        {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+        {0,0,0,1,0,0,0,1,1,0,0,0,1,0,1,0},
+        {1,1,1,1,1,1,1,1,0,0,1,1,1,1,1,0},
+        {0,1,0,0,0,0,0,0,0,0,1,0,0,0,1,0},
+        {0,1,0,1,1,1,0,0,0,0,1,0,1,0,1,0},
+        {0,1,0,1,0,0,0,0,0,0,1,0,1,1,1,0},
+        {0,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0},
+        {0,0,0,0,0,0,0,0,0,0,1,0,1,1,1,0},
+        {0,1,1,1,1,1,1,1,1,1,1,0,1,0,1,0},
+        {0,0,1,0,0,0,0,0,0,0,0,0,1,0,0,0},
+        {0,1,1,1,1,1,1,1,0,1,1,0,1,1,1,0},
+        {0,1,0,0,0,0,0,0,0,1,0,0,1,0,1,0},
+        {0,1,0,1,1,1,1,1,1,1,1,1,1,0,1,0},
+        {0,1,0,0,0,0,0,0,0,0,0,0,1,0,1,0},
+        {0,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1},
+        {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+        };
+    int filas, columnas;
+    // Se recorre como un bucle anidado
+    for(filas = 0;filas < 16; filas++){
+        for(columnas = 0; columnas < 16; columnas++)
+            printf("%d\t", matriz[filas][columnas]);
+        printf("\n\n");
+    }
 }
 
 //Le damos a los laterales del tablero el valor de un booleano 1 que serian las casillas negras, las casillas de la matriz
