@@ -67,9 +67,12 @@ int Tablero_facil[10][10]={
     {0,0,1,1,0,0,0,1,2,'\0'},
     {0,0,0,0,0,0,0,0,0,'\0'}};
     printf("\n");
+    coord_x=1;
+    coord_y=1;
 
 
     imprimir_tablero(Tablero_facil,10,10);
+    partida(Tablero_facil,coord_x,coord_y);
 
 
 break;

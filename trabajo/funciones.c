@@ -73,14 +73,18 @@ void puede_mover(int tablero[][24],int *fin,int*coord_x,int*coord_y){
           if(tablero[*coord_y][*coord_x] == '#'){ //si encuentra un # vuelve donde antes
                   *coord_x=*coord_x +1 ;}
 }}}
-//void partida(int tablero[][],int coord_x;coord_y,int final){
+void partida(int tablero[][24],int coord_x,int coord_y){
     //_Bool final;
-    //do{
-     //   imprimir_tablero//sacar por pantalla
-        //puede mover???
+    int fin = 0;
+    do{
+     //  imprimir_tablero//sacar por pantalla
+     imprimir_tablero(tablero,24,24);
+        //puede mover??? y cambia simbolos del tablero
+        puede_mover(tablero,&fin,&coord_x,&coord_y);
         //refrescar el tablero
-   // }while(final)
-//}
+        refrescar_tablero(tablero,coord_x,coord_y);
+   }while(fin=0);
+}
 void refrescar_tablero(int tablero[][24],int coord_x,int coord_y){
 posicion(tablero,coord_x,coord_y);
 }
