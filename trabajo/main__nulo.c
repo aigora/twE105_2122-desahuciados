@@ -13,17 +13,19 @@ int main (){
      printf("Introduzca el nombre del jugador.\n");
      char Nombre[50];
 
-//FILE *f;
-//f= fopen("datosjugadores.txt","w");
-//if(f==NULL){
-    //printf("Error al abrir el fichero.\n", "w");
-    //return -1;
-//}
-//else {// Si ha funcionado, comienza escritura
-//fprintf(f,"%s", Nombre [50]);
-//fclose(f);
-//return 0;
-//}
+FILE *f;
+f= fopen("datosjugadores.txt","w");
+if(f==NULL){
+    printf("Error al abrir el fichero.\n", "w");
+  return -1;
+}
+else {// Si ha funcionado, comienza escritura
+fgets(Nombre,50,stdin);
+fprintf(f,"El nombre introducido es :%s",Nombre);
+fclose(f);
+system("pause");
+
+}
 
 //Menu para seleccionar el nivel de dificultad
 int op;
@@ -65,7 +67,7 @@ while((op!=4)&&(op!=3)&&(op!=2)&&(op!=1));
 //Coordenadas del jugador x e y para moverse por el tablero
 int coord_x;
 int coord_y;
-
+_Bool final=0;
 
 int Tablero_facil[10][10]=
     {{0,0,0,0,0,0,0,0,0,'\0'},
@@ -75,7 +77,7 @@ int Tablero_facil[10][10]=
     {0,1,0,0,0,0,0,1,0,'\0'},
     {0,1,1,0,0,0,0,1,0,'\0'},
     {0,0,1,0,0,0,0,1,0,'\0'},
-    {0,0,1,1,0,0,0,1,1,'\0'},
+    {0,0,1,1,0,0,0,1,2,'\0'},
     {0,0,0,0,0,0,0,0,0,'\0'}};
 int Tablero_medio[16][16] = {
        {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'\0'},
@@ -92,7 +94,7 @@ int Tablero_medio[16][16] = {
        {0,1,0,0,0,0,0,0,0,1,0,0,1,0,1,'\0'},
        {0,1,0,1,1,1,1,1,1,1,1,1,1,0,1,'\0'},
        {0,1,0,0,0,0,0,0,0,0,0,0,1,0,1,'\0'},
-       {0,1,1,1,1,1,1,1,1,1,1,1,1,0,1,'\0'},
+       {0,1,1,1,1,1,1,1,1,1,1,1,1,0,2,'\0'},
        {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'\0'}};
     printf("\n");
 
