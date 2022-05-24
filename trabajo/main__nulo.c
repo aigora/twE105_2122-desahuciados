@@ -1,5 +1,5 @@
 #include <stdio.h>
-void tablero(int matriz[][24],int fila,int columna);
+void imprimir_tablero(int matriz[][24],int fila,int columna);
 typedef struct{
     char Nombre[20] ;
     int dificultad;
@@ -9,6 +9,7 @@ int main (){
      //Preguntamos al jugador su nombre y lo guardamos en un fichero.
      printf("Introduzca el nombre del jugador.\n");
      char Nombre[50];
+
 //FILE *f;
 //f= fopen("datosjugadores.txt","w");
 //if(f==NULL){
@@ -59,32 +60,40 @@ break;
 while((op!=4)&&(op!=3)&&(op!=2)&&(op!=1));
 
 
+
+
+int Tablero[9][9]=
+    {{0,0,0,0,0,0,0,0,0,0,'\0'},
+    {1,1,1,1,0,0,1,1,1,0,'\0'},
+    {0,0,0,1,1,1,1,0,0,0,'\0'},
+    {0,1,1,1,1,1,0,1,0,1,'\0'},
+    {0,1,0,0,0,0,0,1,0,1,'\0'},
+    {0,1,1,0,0,0,0,1,0,0,'\0'},
+    {0,0,1,0,0,0,0,1,0,0,'\0'},
+    {0,0,1,1,0,0,0,1,1,1,'\0'},
+    {0,0,0,0,0,0,0,0,0,0,'\0'}};
+    printf("\n");
+
+    imprimir_tablero(Tablero,10,10);
+    int i,j;
+_Bool esblanca;//1 es casilla blanca,0 es casilla negra
+
 return 0;
 }
 
 
-void tablero(int matriz[][24],int fila,int columna){
+void imprimir_tablero(int matriz[][24],int fila,int columna){
 
 int i,j;
-_Bool esblanca;//1 es casilla blanca,0 es casilla negra
-
-    int Tablero[9][9]=
-    {{0,0,0,0,0,0,0,0,0,0,0},
-    {1,1,1,1,0,0,1,1,1,0,0},
-    {0,0,0,1,1,1,1,0,0,0,0},
-    {0,1,1,1,1,1,0,1,0,1,0},
-    {0,1,0,0,0,0,0,1,0,1,0},
-    {0,1,1,0,0,0,0,1,0,0,0},
-    {0,0,1,0,0,0,0,1,0,0,0},
-    {0,0,1,1,0,0,0,1,1,1,1},
-    {0,0,0,0,0,0,0,0,0,0,0}};
-
 for(i = 0; i < 9; i++){
     for(j = 0; j < 9; j++){
-    if (j == 0)
-printf ("|\t");
-else
-printf("%d\t " ,Tablero[i][j]);
+    if (matriz[i][j]==0){
+        matriz[i][j]='#';
+    }
+    if(matriz[i][j]==1){
+        matriz[i][j]=' ';
+    }
+printf ("%c ",matriz[i][j]);
 }
 printf("| \n");
 }
