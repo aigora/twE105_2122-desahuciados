@@ -6,11 +6,20 @@
 typedef struct{
     char Nombre[50] ;
     int dificultad;
-    int tiempo;
+    char Comentario[50];
 }Datosjugadores;
 int main (){
+
+       int i,j; //Variables para bucles
+    //Coordenadas del jugador x e y para moverse por el tablero
+     int coord_x=1;
+     int coord_y=1;
+     int fin=0;
+
      //Preguntamos al jugador su nombre y lo guardamos en un fichero.
+
      printf("Introduzca el nombre del jugador.\n");
+
      char Nombre[50];
 
 FILE *f;
@@ -40,38 +49,16 @@ do{
 scanf("%i",&op);
     switch(op)
 {
+
+
+    //Le damos a los laterales del tablero el valor de 0 y  1 que serian el camino,
+
+
 case 1:
 printf("Dificultad Facil\n");
-
-break;
-case 2:
-printf("Dificultad Media");
-
-break;
-case 3:
-printf("Dificultad Dificil\n");
-break;
-case 4:
-printf("Salir");
-
-break;
-default:
-printf("No ha seleccionado ningun nivel de dificultad, por favor reintentelo...\n");
-break;
-}
-
-}
-
-while((op!=4)&&(op!=3)&&(op!=2)&&(op!=1));
-
-//Coordenadas del jugador x e y para moverse por el tablero
-int coord_x=1;
-int coord_y=1;
-int fin0;
-
-int Tablero_facil[10][10]=
-    {{0,0,0,0,0,0,0,0,0,'\0'},
-    {0,1,1,1,0,0,1,1,1,'\0'},// empezaría en el primer uno, es decir en la posición (1,1)
+int Tablero_facil[10][10]={
+    {0,0,0,0,0,0,0,0,0,0},
+    {0,1,1,1,0,0,1,1,1,0},// empezaría en el primer uno, es decir en la posición (1,1)
     {0,0,0,1,1,1,1,0,0,'\0'},
     {0,1,1,1,1,1,0,1,0,'\0'},
     {0,1,0,0,0,0,0,1,0,'\0'},
@@ -79,6 +66,15 @@ int Tablero_facil[10][10]=
     {0,0,1,0,0,0,0,1,0,'\0'},
     {0,0,1,1,0,0,0,1,2,'\0'},
     {0,0,0,0,0,0,0,0,0,'\0'}};
+    printf("\n");
+
+
+    imprimir_tablero(Tablero_facil,10,10);
+
+
+break;
+case 2:
+printf("Dificultad Media");
 int Tablero_medio[16][16] = {
        {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'\0'},
        {0,0,0,1,0,0,0,1,1,0,0,0,1,0,1,'\0'},
@@ -96,17 +92,56 @@ int Tablero_medio[16][16] = {
        {0,1,0,0,0,0,0,0,0,0,0,0,1,0,1,'\0'},
        {0,1,1,1,1,1,1,1,1,1,1,1,1,0,2,'\0'},
        {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'\0'}};
-    printf("\n");
-
-
-    imprimir_tablero(Tablero_facil,10,10);
-
-     printf("\n");
+ printf("\n");
 
    imprimir_tablero(Tablero_medio,16,16);
+break;
+case 3:
+printf("Dificultad Dificil\n");
+int Tablero_dificil[24][24] = {
+    {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+    {0,1,1,1,1,0,0,1,1,1,1,1,0,0,1,1,1,1,1,1,1,0,0,0},
+    {0,1,0,1,0,0,0,0,0,0,0,1,0,0,1,0,0,0,0,0,1,0,0,0},
+    {0,1,0,1,1,1,1,1,1,1,1,1,0,0,1,1,1,1,0,0,1,0,1,0},
+    {0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0},
+    {1,1,1,1,1,1,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0},
+    {0,0,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0},
+    {0,0,1,1,1,1,0,0,1,0,0,1,0,0,0,0,0,0,1,0,1,0,1,0},
+    {0,0,1,0,0,1,0,0,1,1,1,1,1,1,1,1,1,1,1,0,1,0,1,0},
+    {0,1,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,1},
+    {0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0},
+    {0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0},
+    {0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,0},
+    {0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0},
+    {0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,1,1,1,0},
+    {0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0},
+    {0,0,1,0,1,1,1,1,1,1,1,1,0,0,1,1,1,1,1,0,1,0,0,0},
+    {0,0,1,0,0,0,0,0,0,0,0,1,0,0,1,0,0,0,0,0,1,1,1,0},
+    {0,1,1,1,1,1,1,1,1,1,1,1,0,0,1,1,1,1,1,1,1,0,1,0},
+    {0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0},
+    {0,1,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,1,0},
+    {0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0},
+    {0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,0,0},
+    {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+    };
+     printf("\n");
 
-    int i,j;
-_Bool esblanca;//1 es casilla blanca,0 es casilla negra
+
+    imprimir_tablero(Tablero_dificil,24,24);
+
+break;
+case 4:
+printf("Salir");
+
+break;
+default:
+printf("No ha seleccionado ningun nivel de dificultad, por favor reintentelo...\n");
+break;
+}
+
+}
+
+while((op!=4)&&(op!=3)&&(op!=2)&&(op!=1));
 
 return 0;
 }
@@ -114,6 +149,4 @@ return 0;
 
 
 
-//Le damos a los laterales del tablero el valor de un booleano 1 que serian las casillas negras, las casillas de la matriz
-// con un valor de bool 0 es que la casilla es blanca
 
