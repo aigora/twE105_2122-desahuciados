@@ -67,10 +67,10 @@ int Tablero_facil[10][10]={
     {0,0,1,1,1,0,0,1,2,'\0'},
     {0,0,0,0,0,0,0,0,0,'f'}};
     printf("\n");
-    int coord_x2= 1;
-    int coord_y2= 1;
+    int coord_x= 1;
+    int coord_y= 1;
 
-    imprimir_tablero(Tablero_facil,10,10);
+
     posicion(Tablero_facil,coord_x,coord_y);
     partida(Tablero_facil,coord_x,coord_y);
 
@@ -134,8 +134,8 @@ int Tablero_dificil[24][24] = {
     {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
     };
      printf("\n");
-     int coord_x= 1;
-     int coord_y= 1;
+     int coord_x2= 1;
+     int coord_y2= 1;
 
 
 

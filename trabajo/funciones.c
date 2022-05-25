@@ -25,7 +25,7 @@ void puede_mover(int tablero[][10],int *fin,int*coord_x,int*coord_y){
     char movimiento; //información que introduce el jugador por teclado
     if(tablero[*coord_y][*coord_x]!='#'){
            // Miro si ha llegado a la salida
-            if(tablero[*coord_y+1][*coord_x+1]==' '){//El dos representaría la salida.                  /// Problema
+            if(tablero[*coord_y+1][*coord_x+1]=='f'){//El dos representaría la salida.                  /// Problema
                 *fin = 1;
     }
    else {
@@ -55,15 +55,17 @@ void puede_mover(int tablero[][10],int *fin,int*coord_x,int*coord_y){
                   *coord_y=*coord_y -1 ;}
    }
 //moverse derecha  D
-       if((movimiento=='d')||(movimiento=='D'))
-          { if(tablero[*coord_y][*coord_x] == '$'){
-                  tablero[*coord_y][*coord_x] = ' ';             //ojo
+       if((movimiento=='d')||(movimiento=='D')){
+           if(tablero[*coord_y][*coord_x] == '$'){
+                  tablero[*coord_y][*coord_x] =' ';             //ojo
 
           } *coord_x= *coord_x +1 ;
 
         //como se mueve a la derecha solo cambiamos x
 
-          if(tablero[*coord_y][*coord_x] == ' '){ //si encuentra un # vuelve donde antes        //ojo
+
+
+          if(tablero[*coord_y][*coord_x] == '#'){ //si encuentra un # vuelve donde antes        //ojo
                   *coord_x=*coord_x -1 ;}
           }
 //Moverse izquierda A
