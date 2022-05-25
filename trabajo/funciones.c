@@ -128,7 +128,7 @@ printf("\n");
 }
 void puede_mover2(int tablero[][16],int *fin,int*coord_x,int*coord_y){
     //El jugador puede moverse con las teclas  awsd AWSD.
-    char movimiento; //información que introduce el jugador por teclado
+    char movimiento[100]; //información que introduce el jugador por teclado
     if(tablero[*coord_y][*coord_x]!=254){
            // Miro si ha llegado a la salida
             if(tablero[*coord_y+1][*coord_x+1]=='f'){//El dos representaría la salida.                  /// Problema
@@ -137,7 +137,7 @@ void puede_mover2(int tablero[][16],int *fin,int*coord_x,int*coord_y){
    else {
        do{
 
-            gets(movimiento);
+            scanf("%c",&movimiento);
 
        }
         while((movimiento != 'a' )&& (movimiento != 'w') && (movimiento != 's' )&& (movimiento != 'd')&& (movimiento != 'A')&&(movimiento != 'W') && (movimiento != 'S') && (movimiento != 'D' ));
