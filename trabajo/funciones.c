@@ -312,3 +312,17 @@ posicion3(tablero,coord_x,coord_y);
 void posicion3(int tablero[][24],int coord_x,int coord_y){
    tablero[coord_y][coord_x]='*'; //Lugar de donde empezamos el laberinto,y se vera con un $.
 }
+
+
+
+
+
+
+void cambiar(char aux[]){
+int i;
+for(i=0;i<50;i++){
+    if(aux[i]=='\n'){
+        aux[i]='\0';
+    }
+}
+}

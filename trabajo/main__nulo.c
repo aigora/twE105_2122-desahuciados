@@ -32,6 +32,32 @@ int main (){
     TAB3.coord_y =1;
     strcpy(TAB1.Dificultad,"Dificil");
 
+    Datosjugadores Datosjug;
+
+    int n=0;
+    char aux[50];
+    int i,j; //Variables para bucles
+    //fgets(Datosjug.Nombre,50,stdin);
+     //Preguntamos al jugador su nombre y lo guardamos en un fichero.
+ printf("Introduzca el nombre del jugador.\n");
+
+
+ FILE *f;
+f = fopen("DATOSJUGADORES.txt","a");
+if(f==NULL){
+    printf("Error al abrir el fichero.\n", "a");
+  return -1;
+}
+// Si ha funcionado, comienza escritura
+else {
+        fgets(aux,50,stdin);
+        cambiar(aux);
+        fprintf(f,",%s",aux);
+//fputs(f,Datosjug.Nombre);
+fclose(f);
+system("pause");
+}
+
 
 
 
@@ -152,6 +178,28 @@ break;
 case 5:
 printf("Jugadores de partidas anteriores:\n");
 
+
+ FILE *f;
+f = fopen("DATOSJUGADORES.txt","r");
+if(f==NULL){
+    printf("Error al abrir el fichero.\n", "r");
+  return -1;
+}
+// Si ha funcionado, comienza escritura
+else {
+            fgets(aux,50,f);
+            printf("%s",aux);
+
+
+}
+
+
+
+fclose(f);
+system("pause");
+
+
+
 break;
 default:
 printf("No ha seleccionado ningun nivel de dificultad, por favor reintentelo...\n");
@@ -164,42 +212,8 @@ while((op!=5)&&(op!=4)&&(op!=3)&&(op!=2)&&(op!=1));
 
 
 
-Datosjugadores Datosjug;
-    int n=0;
-    char aux;
-    int i,j; //Variables para bucles
-    fgets(Datosjug.Nombre,50,stdin);
-     //Preguntamos al jugador su nombre y lo guardamos en un fichero.
-
-     printf("Introduzca el nombre del jugador.\n");
-
-    char Nombre[50];
 
 
-
-
- FILE *f;
-f= fopen(".txt","w");
-if(f==NULL){
-    printf("Error al abrir el fichero.\n", "w");
-  return -1;
-}
-else {// Si ha funcionado, comienza escritura
-        fgets(Datosjug.Nombre,50,stdin);
-fprintf(Datosjug.Nombre,50,stdin);
-if(op=1){
-    fprintf(TAB1.Dificultad,50,stdin);
-}
-if(op=2){
-    fprintf(TAB2.Dificultad,50,stdin);
-}
-if(op=3){
-    fprintf(TAB3.Dificultad,50,stdin);
-}
-
-
-fclose(f);
-//system("pause");
 
 
 
@@ -207,7 +221,7 @@ fclose(f);
 
 return 0;
 }
-}
+
 
 
 
