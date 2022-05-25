@@ -3,24 +3,28 @@
 #include<string.h>
 #include "funciones.h"
 
+
 typedef struct{
-    char Nombre[50] ;
-    int dificultad;
-    char Comentario[50];
-}Datosjugadores;
+    char Dificultad[50];
+    int coord_x;
+    int coord_y;
+    char Introduccion[50];
+}DatosTablero;
+
+
+
+
+
 int main (){
+    DatosTablero TAB1,TAB2,TAB3;
 
-
-       int i,j; //Variables para bucles
-    //Coordenadas del jugador x e y para moverse por el tablero
-
-
+    int i,j; //Variables para bucles
 
      //Preguntamos al jugador su nombre y lo guardamos en un fichero.
 
      printf("Introduzca el nombre del jugador.\n");
 
-     char Nombre[50];
+    char Nombre[50];
 
 FILE *f;
 f= fopen("datosjugadores.txt","w");
