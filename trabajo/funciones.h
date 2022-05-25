@@ -23,3 +23,5 @@ void partida3(int tablero[][24],int coord_x,int coord_y);
 void puede_mover3(int tablero[][24],int *fin,int*coord_x,int*coord_yl);
 void refrescar_tablero3(int tablero[][24],int coord_x,int coord_y);
 void posicion3(int tablero[][24],int coord_x,int coord_y);
+
+

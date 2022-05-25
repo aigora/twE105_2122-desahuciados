@@ -17,6 +17,19 @@ typedef struct{
 
 int main (){
     DatosTablero TAB1,TAB2,TAB3;
+    TAB1.coord_x =1;
+    TAB1.coord_y =1;
+    strcpy(TAB1.Dificultad,"Facil");
+
+    TAB2.coord_x =1;
+    TAB2.coord_y =2;
+    strcpy(TAB1.Dificultad,"Medio");
+    TAB3.coord_x =1;
+    TAB3.coord_y =1;
+    strcpy(TAB1.Dificultad,"Dificil");
+
+
+
 
     int i,j; //Variables para bucles
 
@@ -27,7 +40,7 @@ int main (){
     char Nombre[50];
 
 FILE *f;
-f= fopen("datosjugadores.txt","w");
+f= fopen(".txt","w");
 if(f==NULL){
     printf("Error al abrir el fichero.\n", "w");
   return -1;
@@ -71,12 +84,12 @@ int Tablero_facil[10][10]={
     {0,0,1,1,1,0,0,1,2,0},
     {0,0,0,0,0,0,0,0,0,'f'}};
     printf("\n");
-    int coord_x= 1;       //Coordenadas del jugador x e y para moverse por el tablero
-    int coord_y= 1;
+    //int coord_x= 1;       //Coordenadas del jugador x e y para moverse por el tablero
+    //int coord_y= 1;
 
 
-    posicion(Tablero_facil,coord_x,coord_y);
-    partida(Tablero_facil,coord_x,coord_y);
+    posicion(Tablero_facil,TAB1.coord_x,TAB1.coord_y);
+    partida(Tablero_facil,TAB1.coord_x,TAB1.coord_y);
 
 
 break;
@@ -101,11 +114,11 @@ int Tablero_medio[16][16] = {
        {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'f'}};
 
     printf("\n");
-    int coord_x1= 1;    //Coordenadas del jugador x e y para moverse por el tablero
-    int coord_y1= 2;
+   // int coord_x1= 1;    //Coordenadas del jugador x e y para moverse por el tablero
+   // int coord_y1= 2;
 
-    posicion2(Tablero_medio,coord_x1,coord_y1);
-    partida2(Tablero_medio,coord_x1,coord_y1);
+    posicion2(Tablero_medio,TAB2.coord_x,TAB2.coord_y);
+    partida2(Tablero_medio,TAB2.coord_x,TAB2.coord_y);
 
 break;
 case 3:
@@ -137,11 +150,11 @@ int Tablero_dificil[24][24] = {
     {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'f'},
     };
      printf("\n");
-     int coord_x2= 1; //Coordenadas del jugador x e y para moverse por el tablero
-     int coord_y2= 1;
+    // int coord_x2= 1; //Coordenadas del jugador x e y para moverse por el tablero
+    // int coord_y2= 1;
 
-    posicion3(Tablero_dificil,coord_x2,coord_y2);
-    partida3(Tablero_dificil,coord_x2,coord_y2);
+    posicion3(Tablero_dificil,TAB3.coord_x,TAB3.coord_y);
+    partida3(Tablero_dificil,TAB3.coord_x,TAB3.coord_y);
 
 
 

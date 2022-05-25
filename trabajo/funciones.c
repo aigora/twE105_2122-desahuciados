@@ -136,7 +136,8 @@ void puede_mover2(int tablero[][16],int *fin,int*coord_x,int*coord_y){
     }
    else {
        do{
-            scanf("%c",&movimiento);
+
+            gets(movimiento);
 
        }
         while((movimiento != 'a' )&& (movimiento != 'w') && (movimiento != 's' )&& (movimiento != 'd')&& (movimiento != 'A')&&(movimiento != 'W') && (movimiento != 'S') && (movimiento != 'D' ));
