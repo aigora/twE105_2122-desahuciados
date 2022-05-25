@@ -14,7 +14,7 @@ int main (){
     //Coordenadas del jugador x e y para moverse por el tablero
      int coord_x=1;
      int coord_y=1;
-     int fin=0;
+
 
      //Preguntamos al jugador su nombre y lo guardamos en un fichero.
 
@@ -57,21 +57,21 @@ scanf("%i",&op);
 case 1:
 printf("Dificultad Facil\n");
 int Tablero_facil[10][10]={
-    {0,0,0,0,0,0,0,0,0,0},
-    {0,1,1,1,0,0,1,1,1,0},// empezaría en el primer uno, es decir en la posición (1,1)
-    {0,0,0,1,1,1,1,0,0,'\0'},
-    {0,1,1,1,1,1,0,1,0,'\0'},
+    {0,0,0,0,0,0,0,0,0,'\0'},
+    {0,1,1,1,0,0,1,1,1,'\0'},// empezaría en el primer uno, es decir en la posición (1,1)
+    {0,0,0,1,1,1,1,1,0,'\0'},
+    {0,1,1,1,1,0,0,1,0,'\0'},
     {0,1,0,0,0,0,0,1,0,'\0'},
     {0,1,1,0,0,0,0,1,0,'\0'},
     {0,0,1,0,0,0,0,1,0,'\0'},
-    {0,0,1,1,0,0,0,1,2,'\0'},
-    {0,0,0,0,0,0,0,0,0,'\0'}};
+    {0,0,1,1,1,0,0,1,2,'\0'},
+    {0,0,0,0,0,0,0,0,0,'f'}};
     printf("\n");
-    coord_x=1;
-    coord_y=1;
-
+    int coord_x2= 1;
+    int coord_y2= 1;
 
     imprimir_tablero(Tablero_facil,10,10);
+    posicion(Tablero_facil,coord_x,coord_y);
     partida(Tablero_facil,coord_x,coord_y);
 
 
@@ -81,7 +81,7 @@ printf("Dificultad Media");
 int Tablero_medio[16][16] = {
        {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'\0'},
        {0,0,0,1,0,0,0,1,1,0,0,0,1,0,1,'\0'},
-       {1,1,1,1,1,1,1,1,0,0,1,1,1,1,1,'\0'},
+       {0,1,1,1,1,1,1,1,0,0,1,1,1,1,1,'\0'},
        {0,1,0,0,0,0,0,0,0,0,1,0,0,0,1,'\0'},
        {0,1,0,1,1,1,0,0,0,0,1,0,1,0,1,'\0'},
        {0,1,0,1,0,0,0,0,0,0,1,0,1,1,1,'\0'},
@@ -95,9 +95,15 @@ int Tablero_medio[16][16] = {
        {0,1,0,0,0,0,0,0,0,0,0,0,1,0,1,'\0'},
        {0,1,1,1,1,1,1,1,1,1,1,1,1,0,2,'\0'},
        {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'\0'}};
- printf("\n");
+    printf("\n");
+    int coord_x3= 1;
+    int coord_y3= 1;
 
-   imprimir_tablero(Tablero_medio,16,16);
+
+    imprimir_tablero(Tablero_facil,10,10);
+    posicion(Tablero_facil,coord_x,coord_y);
+    partida(Tablero_facil,coord_x,coord_y);
+
 break;
 case 3:
 printf("Dificultad Dificil\n");
@@ -124,10 +130,13 @@ int Tablero_dificil[24][24] = {
     {0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0},
     {0,1,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,1,0},
     {0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0},
-    {0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,0,0},
+    {0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,2,0},
     {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
     };
      printf("\n");
+     int coord_x= 1;
+     int coord_y= 1;
+
 
 
     imprimir_tablero(Tablero_dificil,24,24);
