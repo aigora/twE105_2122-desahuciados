@@ -39,9 +39,11 @@ int main (){
     int i,j; //Variables para bucles
     //fgets(Datosjug.Nombre,50,stdin);
      //Preguntamos al jugador su nombre y lo guardamos en un fichero.
- printf("Introduzca el nombre del jugador.\n");
-
-
+    printf("***********************************************************************************************************/n");
+    printf("/n**                                                                                                         **");
+    printf("/n**                              Introduzca el nombre del jugador.                                          **/n");
+    printf("/n**                                                                                                         **");
+    printf("***************************************************************************************************************/n");
  FILE *f;
 f = fopen("DATOSJUGADORES.txt","a");
 if(f==NULL){
@@ -52,7 +54,7 @@ if(f==NULL){
 else {
         fgets(aux,50,stdin);
         cambiar(aux);
-        fprintf(f,",%s",aux);
+        fprintf(f,"%s",aux);
 //fputs(f,Datosjug.Nombre);
 fclose(f);
 system("pause");
@@ -74,7 +76,7 @@ do {
             printf("4. Salir\n");
             printf("5. Jugadores anteriores\n");
 
-scanf("%i",&op);
+scanf("%i",&aux.op); // para qeu guarde y luego si queremos iprimir tambien la dificultad en los datos iniciales
     switch(op)
 {
 
