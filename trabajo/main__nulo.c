@@ -39,11 +39,11 @@ int main (){
     int i,j; //Variables para bucles
     //fgets(Datosjug.Nombre,50,stdin);
      //Preguntamos al jugador su nombre y lo guardamos en un fichero.
-    printf("***********************************************************************************************************/n");
-    printf("/n**                                                                                                         **");
-    printf("/n**                              Introduzca el nombre del jugador.                                          **/n");
-    printf("/n**                                                                                                         **");
-    printf("***************************************************************************************************************/n");
+    printf("***********************************************************************************************************\n");
+    printf("\n**                                                                                                         **");
+    printf("\n**                              Introduzca el nombre del jugador.                                          **\n");
+    printf("\n**                                                                                                         **\n");
+    printf("***************************************************************************************************************\n");
  FILE *f;
 f = fopen("DATOSJUGADORES.txt","a");
 if(f==NULL){
@@ -76,7 +76,7 @@ do {
             printf("4. Salir\n");
             printf("5. Jugadores anteriores\n");
 
-scanf("%i",&aux.op); // para qeu guarde y luego si queremos iprimir tambien la dificultad en los datos iniciales
+scanf("%i",&op); // para qeu guarde y luego si queremos iprimir tambien la dificultad en los datos iniciales
     switch(op)
 {
 
@@ -189,7 +189,9 @@ if(f==NULL){
 }
 // Si ha funcionado, comienza escritura
 else {
-            fgets(aux,50,f);
+
+                fgets(aux,50,f);
+
             printf("%s",aux);
 
 

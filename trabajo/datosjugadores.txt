@@ -1,1 +1,1 @@
-El nombre de los jugadores es carlos,lucas,diego,manel,laura,mario,rober
+El nombre de los jugadores es carlos,diego
