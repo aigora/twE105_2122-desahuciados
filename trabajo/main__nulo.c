@@ -39,11 +39,19 @@ int main (){
     int i,j; //Variables para bucles
     //fgets(Datosjug.Nombre,50,stdin);
      //Preguntamos al jugador su nombre y lo guardamos en un fichero.
+<<<<<<< HEAD
     printf("***********************************************************************************************************\n");
     printf("\n**                                                                                                         **");
     printf("\n**                              Introduzca el nombre del jugador.                                          **\n");
     printf("\n**                                                                                                         **\n");
     printf("***************************************************************************************************************\n");
+=======
+    printf("***********************************************************************************************************/n");
+    printf("/n**                                                                                                       **");
+    printf("/n**                              Introduzca el nombre del jugador.                                        **/n");
+    printf("/n**                                                                                                       **");
+    printf("************************************************************************************************************/n");
+>>>>>>> a386ffc4059e030cc5b861d11b86d747cc41bfea
  FILE *f;
 f = fopen("DATOSJUGADORES.txt","a");
 if(f==NULL){
