@@ -40,10 +40,10 @@ int main (){
     //fgets(Datosjug.Nombre,50,stdin);
      //Preguntamos al jugador su nombre y lo guardamos en un fichero.
     printf("***********************************************************************************************************/n");
-    printf("/n**                                                                                                         **");
-    printf("/n**                              Introduzca el nombre del jugador.                                          **/n");
-    printf("/n**                                                                                                         **");
-    printf("***************************************************************************************************************/n");
+    printf("/n**                                                                                                       **");
+    printf("/n**                              Introduzca el nombre del jugador.                                        **/n");
+    printf("/n**                                                                                                       **");
+    printf("************************************************************************************************************/n");
  FILE *f;
 f = fopen("DATOSJUGADORES.txt","a");
 if(f==NULL){
